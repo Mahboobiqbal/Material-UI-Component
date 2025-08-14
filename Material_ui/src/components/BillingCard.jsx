@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
-export function BillingCard({ planName, price, features, onSelect, sx }) {
+export function BillingCard({ plan, price, features, onSelect, sx }) {
   return (
     <Card
       variant="outlined"
@@ -23,19 +23,20 @@ export function BillingCard({ planName, price, features, onSelect, sx }) {
         flexDirection: "column",
         justifyContent: "space-between",
         height: "100%",
+        border: "1px solid black",
+        boxShadow: 2,
         "&:focus-within": {
-          outline: "2px solid",
-          outlineColor: "primary.main",
+          outline: "2.5px solid black",
         },
         ...sx,
       }}
       tabIndex={0}
       role="region"
-      aria-label={`${planName} billing plan`}
+      aria-label={`Billing plan: ${plan}`}
     >
       <CardContent>
         <Typography variant="h5" gutterBottom>
-          {planName}
+          {plan}
         </Typography>
         <Typography variant="h4" color="primary" gutterBottom>
           {price}
@@ -55,8 +56,12 @@ export function BillingCard({ planName, price, features, onSelect, sx }) {
         variant="contained"
         color="primary"
         onClick={onSelect}
-        sx={{ mt: 2 }}
-        aria-label={`Select ${planName} plan`}
+        sx={{
+          mt: 2,
+          border: "1px solid black",
+          boxShadow: 2,
+        }}
+        aria-label={`Select ${plan} plan`}
       >
         Select Plan
       </Button>
