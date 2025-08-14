@@ -23,10 +23,9 @@ export function BillingCard({ plan, price, features, onSelect, sx }) {
         flexDirection: "column",
         justifyContent: "space-between",
         height: "100%",
-        border: "1px solid black",
-        boxShadow: 2,
+        border: "0.5px solid gray",
         "&:focus-within": {
-          outline: "2.5px solid black",
+          outline: "0.5px solid gray",
         },
         ...sx,
       }}
@@ -58,8 +57,7 @@ export function BillingCard({ plan, price, features, onSelect, sx }) {
         onClick={onSelect}
         sx={{
           mt: 2,
-          border: "1px solid black",
-          boxShadow: 2,
+          border: "0.5px solid gray",
         }}
         aria-label={`Select ${plan} plan`}
       >
