@@ -1,12 +1,26 @@
-# React + Vite
+# BillingCard Component – Test Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+A reusable `<BillingCard>` component built with React and Material-UI (MUI) using a custom theme. Fully responsive, accessible, and styled with the `sx` prop.
 
-Currently, two official plugins are available:
+## Features
+- Shows plan name, price, features, and a "Select Plan" button
+- Custom theme (colors & typography)
+- Responsive design (360px to 1440px)
+- Accessible: keyboard navigation + ARIA labels
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Approach & Trade-offs
+Used MUI’s `sx` prop for co-located styling. Theme split into `palette` and `typography` for maintainability. Focused on minimal external dependencies while meeting responsiveness & a11y needs.
 
-## Expanding the ESLint configuration
+## AI Usage
+AI assisted in:
+- Suggesting folder structure
+- Generating initial theme file boilerplate
+- Providing ARIA examples
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+All code was reviewed and tested manually.
+
+## Run Instructions
+```bash
+npm install
+npm run dev
